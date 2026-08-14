@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Be Vietnam Pro', system-ui, -apple-system, sans-serif;
+  }
+  .font-serif {
+    font-family: 'Lora', 'Georgia', serif;
+  }
+}
+
+@layer utilities {
+  @keyframes pulse-slow {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.6; }
+  }
+  .animate-pulse-slow {
+    animation: pulse-slow 8s ease-in-out infinite;
+  }
+
+  @keyframes fade-in {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fade-in {
+    animation: fade-in 0.4s ease-out;
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(103, 2, 1, 0.3);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(103, 2, 1, 0.5);
+}
